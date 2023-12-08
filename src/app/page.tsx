@@ -1,20 +1,22 @@
-import Image from 'next/image'
+import ImgBgPatternCard from '@/imgs/bg-pattern-card'
+import ImgAvatar from '@/components/img-avatar'
+import User from '@/components/user'
+import Metrics from '@/components/metrics'
 
 export default function Home() {
   return (
-    <div>
-      Victor Crest
-      26
-      London
+    <main className='flex items-center justify-center bg-Dark-cyan'>
+      <div className='h-screen'></div>
+      <div className='flex flex-col items-center bg-white rounded-2xl overflow-hidden'>
+        <ImgBgPatternCard />
+        <ImgAvatar />
+        <User />
 
-      80K
-      Followers
+        {/* Horizontal Line */}
+        <div className='h-[1px] w-full my-6 bg-slate-200'></div>
 
-      803K
-      Likes
-
-      1.4K
-      Photos
-    </div>
+        <Metrics />
+      </div>
+    </main>
   )
 }
